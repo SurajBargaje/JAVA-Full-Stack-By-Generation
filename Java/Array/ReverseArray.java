@@ -14,11 +14,10 @@ class ReverseArray {
         System.out.println("Original Array: " + Arrays.toString(number));
 
         int[] reverse = new int[number.length];
-        int count =0;
+        int count = 0;
         for (int i = number.length - 1; i >= 0; i--) {
             reverse[count] = number[i];
-            count++;
-            // System.out.println();
+            count++; 
         }
 
         System.out.println("Reversed Array: " + Arrays.toString(reverse));
