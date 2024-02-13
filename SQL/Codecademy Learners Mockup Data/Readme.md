@@ -1,46 +1,52 @@
-# Codecademy Learners Mockup Data
+# Codecademy Learners Mockup Data Analysis 📊
 
-## Overview
-This project is slightly different than others you have encountered thus far on Codecademy. Instead of a step-by-step tutorial, this project contains a series of open-ended requirements which describe the project you’ll be building. There are many possible ways to correctly fulfill all of these requirements, and you should expect to use the internet, Codecademy, and other resources when you encounter a problem that you cannot easily solve.
+Welcome to the Codecademy Learners Mockup Data Analysis project! In this project, we'll be analyzing mockup data of Codecademy learners to gain insights into their learning patterns and behaviors.
+
+## Project Overview
+This project involves analyzing data from two tables: users and progress. The users table contains information about learners, such as their user ID, email domain, country, and sign-up timestamp. The progress table tracks learners' progress in various courses, including CPP, SQL, HTML, JavaScript, and Java.
 
 ## Project Goals
-Use your knowledge of SQL and analyze some mockup Codecademy learners data. There are two tables:
+Our goals for this project include:
 
+- Exploring the data using SQL queries and aggregate functions.
+- Identifying insights such as the top 25 schools (.edu domains), the number of .edu learners in New York, and the number of learners using the mobile app.
+- Utilizing the strftime() function in SQLite to analyze sign-up counts for each hour.
+- Performing table joins to delve deeper into the data, such as understanding course preferences among different schools and courses taken by learners in specific locations like New York and Chicago.
+
+## Tasks Overview
+### Prerequisites:
+Familiarity with SQL queries, aggregate functions, and multiple table joins.
+
+### Project Requirements:
+- Explore the data using SELECT * from both tables and aggregate functions to understand the dataset.
+- Answer questions such as the top 25 schools (.edu domains), .edu learners in New York, and mobile app users.
+- Use the strftime() function to analyze sign-up counts for each hour.
+- Perform table joins to uncover insights like course preferences among different schools and courses taken by learners in specific locations.
+
+## Database Schema
 ### Users Table:
-- user_id
-- email_domain
-- country
-- postal
-- mobile_app
-- sign_up_at
+- user_id: Integer
+- email_domain: Text
+- country: Text
+- city: Text
+- postal: Integer
+- mobile_app: Text
+- sign_up_at: Datetime
 
 ### Progress Table:
-- user_id
-- learn_cpp
-- learn_sql
-- learn_html
-- learn_javascript
-- learn_java
+- user_id: Integer
+- learn_cpp: Text
+- learn_sql: Text
+- learn_html: Text
+- learn_javascript: Text
+- learn_java: Text
 
-## Prerequisites
-In order to complete this project, you should be familiar with queries, aggregate functions, and multiple table joins. Ideally, you’ve completed Analyze Data with SQL.
+## Setup Instructions
+If you choose to work on this project, you can download the necessary files from this repository resources and use SQLite to run SQL commands using DB Browser.
 
-## Project Requirements
-First, use SELECT * from both tables and use your knowledge of queries and aggregate functions to get to know the data:
+## Resources
+- SQLite Setup Guide
+- DB Browser
 
-- What are the Top 25 schools (.edu domains)?
-- How many .edu learners are located in New York?
-- The mobile_app column contains either mobile-user or NULL. How many of these Codecademy learners are using the mobile app?
-
-The data type of the sign_up_at column is DATETIME. It is for storing a date/time value in the database. SQLite comes with a strftime() function - a very powerful function that allows you to return a formatted date. Now, using this function, query for the sign up counts for each hour.
-
-Join the two tables using JOIN and then see what you can dig out of the data!
-
-- Do different schools (.edu domains) prefer different courses?
-- What courses are the New Yorkers students taking?
-- What courses are the Chicago students taking?
-
-## Solution
-Great work! Visit our forums to compare your project to our sample solution code. You can also learn how to host your own solution on GitHub so you can share it with other learners! Your solution might look different from ours, and that’s okay! There are multiple ways to solve these projects, and you’ll learn more by seeing others’ code.
-
-To experiment with the solution code, open it in DB Browser if you are working on your own computer, or you can copy and paste the text from the .sql file into the SQL code editor here in the project.
+## Ready to Dive In?
+Let's start analyzing the Codecademy learners data and uncover valuable insights that will help us understand their learning journey better! 🚀
