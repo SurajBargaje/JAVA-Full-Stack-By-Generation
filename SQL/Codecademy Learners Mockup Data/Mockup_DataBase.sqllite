@@ -1,0 +1,62 @@
+-- Codecademy Mockup DataBase
+
+-- Have a look at the content of tables with limit of 200.
+SELECT * FROM users 
+LIMIT 200;
+
+SELECT * FROM progress
+LIMIT 200;
+
+
+--  What are the Top 25 schools (.edu domains) with the most Codecademy learners?
+SELECT email_domain,count(*) as total
+FROM users 
+WHERE email_domain  like "%.edu" 
+GROUP by 1
+ORDER by total DESC
+LIMIT 25 ;
+
+--  How many .edu learners located in New York City are using Codecademy?
+SELECT count(*) as New_York_Learners 
+from users 
+WHERE email_domain like "%.edu" 
+AND city = "New York";
+
+-- The mobile_app column contains either mobile-user or NULL. How many of these Codecademy learners are using the mobile app?
+SELECT count(*) 
+as mobile_users 
+FROM users 
+WHERE mobile_app 
+IS NOT NULL;
+
+-- For .edu learners, what are the most popular sign-up times (hours of the day)?
+select strftime('%H',sign_up_at) as Hours,count(*) as count  
+from users 
+group by 1
+ORDER by Hours
+;
+
+
+-- Which educational institutions within .edu domains offer courses in the most diverse range of programming languages among their Codecademy learners?
+select u.email_domain,p.learn_cpp,p.learn_html,p.learn_java,p.learn_javascript,p.learn_sql
+from users u
+join progress p 
+on u.user_id = p.user_id;
+
+-- What courses are the New Yorkers students taking?
+select u.city,p.learn_cpp,p.learn_html,p.learn_java,p.learn_javascript,p.learn_sql
+from users u
+join progress p
+on u.user_id = p.user_id
+where u.city like '%New York%'
+group by u.city;
+
+
+-- What courses are the Chicago students taking?
+select u.city,p.learn_cpp,p.learn_html,p.learn_java,p.learn_javascript,p.learn_sql
+from users u
+join progress p
+on u.user_id = p.user_id
+where u.city like '%chicago%'
+group by u.city;
+
