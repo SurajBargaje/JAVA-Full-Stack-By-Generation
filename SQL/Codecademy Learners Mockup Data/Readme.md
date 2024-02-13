@@ -3,7 +3,7 @@
 Welcome to the Codecademy Learners Mockup Data Analysis project! In this project, we'll be analyzing mockup data of Codecademy learners to gain insights into their learning patterns and behaviors.
 
 ## Project Overview
-This project involves analyzing data from two tables: users and progress. The users table contains information about learners, such as their user ID, email domain, country, and sign-up timestamp. The progress table tracks learners' progress in various courses, including CPP, SQL, HTML, JavaScript, and Java.
+This project involves analyzing data from two tables: `users` and `progress`. The `users` table contains information about learners, such as their `user ID`, `email domain`, `country`, and `sign-up timestamp`. The `progress` table tracks learners' progress in various courses, including `CPP`, `SQL`, `HTML`, `JavaScript`, and `Java`.
 
 ## Project Goals
 Our goals for this project include:
