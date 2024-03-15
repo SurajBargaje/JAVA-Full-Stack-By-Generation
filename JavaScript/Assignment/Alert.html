@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!-- Create an HTML form that contains the first and last names and a submit button. Write a JavaScript program to print the value of the first and last names in the alert box.
+ -->
+    <form action="">
+      <label for="first">Enter your First Name</label> <br />
+      <input type="text" name="first" id="first" /> <br /><br />
+
+      <label for="last">Enter Your Last Name</label> <br />
+      <input type="text" name="last" id="last" /> <br /><br />
+
+      <input type="submit" id="submit" />
+    </form>
+
+    <script>
+      const button1 = document.getElementById("submit");
+      const firstName = document.getElementById("first");
+      const lastName = document.getElementById("last");
+      const submitForm = () => {
+        alert(`Hello ${firstName.value} ${lastName.value} `);
+      };
+
+      button1.addEventListener("click", submitForm);
+    </script>
+  </body>
+</html>
