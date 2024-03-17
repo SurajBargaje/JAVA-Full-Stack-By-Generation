@@ -1,0 +1,19 @@
+
+*{
+    background-color: bisque;
+}
+info{
+    background-color: #feece254;
+}
+
+h1,h2{
+    text-align: center;
+}
+
+.image{
+    display: block;
+    height: 200px;
+    width: 200px;
+    margin-left: 575px;
+    border-radius:  100px ;    
+}
