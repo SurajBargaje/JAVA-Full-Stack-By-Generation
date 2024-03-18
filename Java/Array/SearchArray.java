@@ -19,13 +19,14 @@ public class SearchArray {
                 System.out.println("Match Found for \"" + search + "\" At index " + i);
                 found = true;
                 break;
-            } 
+            }
         }
-        if(!found){
-        System.out.println("Sorry no result found");
+        if (!found) {
+            System.out.println("Sorry no result found");
         }
         System.out.println();
         System.out.println(Arrays.toString(searchArr));
+        sc.close();
     }
 
 }
